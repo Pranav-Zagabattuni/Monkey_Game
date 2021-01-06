@@ -58,7 +58,7 @@ function draw() {
   stroke("black")
   textSize(20)
   fill("black")
-  survivalTime = Math.ceil(frameCount/frameRate())
+  survivalTime = Math.round(frameCount/60)
   text("Survival Time: " + survivalTime, 100,50)
   
   drawSprites();
@@ -78,7 +78,7 @@ function spawnFood(){
   }
   
     banana.velocityX = -3
-  banana.lifetime = 40;
+  banana.lifetime = 50;
   foodGroup.add(banana)
 
 }
@@ -95,7 +95,7 @@ function spawnRocks(){
     obstacle.scale = 0.2;
   }
   obstacle.velocityX = -2.5;
-  obstacle.lifetime = 25
+  obstacle.lifetime = 50;
   obstaclesGroup.add(obstacle)
 }
 
